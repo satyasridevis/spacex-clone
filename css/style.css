@@ -103,13 +103,67 @@ section {
 }
 
 .section-inner {
-  background-color: red;
+  /* background-color: red; */
   position: absolute;
-  top: 100px;
+  bottom: 200px;
+  left: 150px;
+  max-width: 560px;
+}
+
+.section-inner h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.section-inner h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 /* Section A - background Image */
 
 .section-a {
   background-image: url("/img/section-a.webp");
+}
+
+/* Rewatch button */
+.btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  min-width: 130px;
+  padding: 15px 50px;
+  margin-top: 10px;
+  border: 2px solid white;
+  text-transform: uppercase;
+  overflow: hidden;
+  font-weight: 400;
+}
+
+.btn::before {
+  position: absolute;
+  content: "hey";
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn:hover::before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+.btn span {
+  position: relative;
+}
+
+.btn:hover span {
+  color: black;
 }
