@@ -237,6 +237,137 @@ footer ul li a:hover {
   color: #aaa;
 }
 
+/* Hamburger Menu for desktop design */
+.hamburger-menu {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(5px);
+}
+
+.hamburger-bottom {
+  transform: translateY(10px);
+}
+
+/* Transtion hamburger to X while open the menu */
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+/* overlay while click menu - desktop design */
+
+.overlay-show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+/* stop body scroll */
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+/* hide mobile menu items in desktop view*/
+
+.mobile-only {
+  display: none;
+}
+
+/* Mobile Menu */
+
+.mobile-main-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #000;
+  width: 350px;
+  height: 100%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Bring menu from right */
+
+.show-menu {
+  transform: translateX(0);
+}
+
+/* hide overlay and menu item while scrolling */
+.hide-overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.mobile-main-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+
+  padding: 50px;
+  width: 100%;
+}
+
+.mobile-main-menu ul li {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #555;
+  width: 100%;
+  text-align: right;
+  padding-bottom: 8px;
+}
+
+.mobile-main-menu ul li a {
+  color: #fff;
+  transition: color 0.6s;
+}
+.mobile-main-menu ul li a:hover {
+  color: #aaa;
+}
+
 /* Animation */
 
 @keyframes fadeInUp {
@@ -262,5 +393,42 @@ footer ul li a:hover {
   40% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media queries */
+
+@media (max-width: 960px) {
+  .desktop-main-menu {
+    display: none;
+  }
+
+  /* show mobile menu item in mobile view */
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-inner {
+    bottom: 75px;
+    left: 20px;
+  }
+  .section-inner h2 {
+    font-size: 40px;
+  }
+  .logo {
+    width: 130px;
+    margin: auto;
+  }
+
+  footer ul li:first-child {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  footer ul li {
+    margin-right: 10px;
   }
 }
