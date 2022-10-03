@@ -368,9 +368,17 @@ footer ul li a:hover {
   color: #aaa;
 }
 
-/* Falcon9.html inner pages */
+/* inner pages background and inner text animation */
 .bg-falcon-9 {
   background-image: url("/img/falcon-9.webp");
+}
+
+.bg-falcon-heavy {
+  background-image: url("/img/falcon-heavy.webp");
+}
+
+.bg-dragon {
+  background-image: url("/img/dragon.webp");
 }
 
 .section-animate {
@@ -384,6 +392,7 @@ footer ul li a:hover {
   transform: translate(-50%, -50%);
   text-transform: uppercase;
   text-align: center;
+  width: 80%;
 }
 
 .section-inner-center h3 {
@@ -471,6 +480,10 @@ footer ul li a:hover {
   .mobile-only {
     display: block;
   }
+
+  .section-inner-center h3 {
+    font-size: 75px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -494,5 +507,24 @@ footer ul li a:hover {
   }
   footer ul li {
     margin-right: 10px;
+  }
+
+  /* falcon9.html section inner center */
+
+  .section-inner-center {
+    width: 80%;
+  }
+  .section-inner-center h3 {
+    font-size: 50px;
+  }
+
+  /* falcon9 pagees stats section */
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stats div {
+    margin-bottom: 20px;
   }
 }
