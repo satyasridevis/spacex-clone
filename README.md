@@ -1,2 +1,2 @@
 # spacex-clone
-Build and learning  spacex website with the help of brad traversy video tutorial 
+Built and practiced spacex website with the help of brad traversy video tutorial 
